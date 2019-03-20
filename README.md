@@ -32,7 +32,7 @@ print("The stop_number reached", stop_number, "so the while loop's condition bec
     2
     1
     The stop_number reached 0 so the while loop's condition became False and stopped execution
-    
+
 
 Note the lack of a `list` or other collection, and that our second print statement only printed after our stop_number become 0.
 
@@ -68,7 +68,7 @@ while random_num > 0:
     2
     1
     0
-    
+
 
 However, we know that eventually that number will be less than 0 and the loop will eventually stop. This is of critical importance. A while loop must always have a condition that will stop the loop, otherwise we will have an **infinite** loop. Infinite loops can crash your browser or program, if you don't have a way to end it, so, it is very important to make sure your loops have a fairly defined **end** case.
 
@@ -76,7 +76,7 @@ However, we know that eventually that number will be less than 0 and the loop wi
 
 ## When To Use While Loops
 
-While loops are fairly straight forward. We use them in instances where we have a **condition** that serves as the point at which we want a process to stop. For example, if we think about our appetite, we should eat until we aren't hungry, right? Some days that might be two slices of pizza, some days that might be 5 slices of pizza (and that is assumes all pizza slices to be of equal size, which is a *generous* assumption).
+While loops are fairly straight forward. We use them in instances where we have a **condition** that serves as the point at which we want a process to stop. For example, if we think about our appetite, we should eat until we aren't hungry, right? Some days that might be two slices of pizza, some days that might be 5 slices of pizza (and that is assumed all pizza slices to be of equal size, which is a *generous* assumption).
 
 ![liz_lemon_eating_pizza](images/liz_lemon_eating_pizza.gif)
 
@@ -134,7 +134,7 @@ while hydration < 100 and water > 0:
     ah, that was refreshing
     hydration is now at 100 %
     
-    
+
 
 ## On To `break` And `continue` Statements
 
@@ -184,7 +184,7 @@ for num in numbers:
     the code that follows in the for loop
     and goes straight back to the next element in the for loop
     We have enough even numbers in new_list (5). break will stop the for loop now
-    
+
 
 Okay, so, let's unpack what's happening here. 
 
@@ -219,7 +219,7 @@ for i in list(range(0,5)):
     4
     Since we don't have a continue statement,
     I'll always get executed
-    
+
 
 
 ```python
@@ -235,7 +235,7 @@ for i in list(range(0,5)):
     2
     3
     4
-    
+
 
 
 ```python
@@ -247,7 +247,7 @@ for i in list(range(0,5)):
 ```
 
     0
-    
+
 
 These examples are a bit contrived but they very clearly show how `continue` and `break` work inside loops and conditional statements as well as the difference between their execution.
 
@@ -279,10 +279,10 @@ print(check_count)
     before ['aNNE', 'JaNe', 'willIAM', 'WanDA', 'WeSt', 'HELEN', 'tHoMaS', 'HENrY', 'John', 'Marshall', 'May']
     after ['Anne', 'Jane', 'Helen', 'Thomas']
     4
-    
+
 
 Okay, so, as we can tell from our code. We wanted to create a list of 4 names that are properly formatted and that **don't** start with the letter `w`. To optimize our code, we first check to see if the name starts with `w`. If it does, we skip all other operations that we need to do and go to the next name. Next we check to see if we have hit our quota of 4 names. If we have, then stop the iteration altogether. Lastly, if neither condition is met, format the given name and append it to our new list of formatted names.
-This way, we are optimizing our code by making sure that we eliminate performing any operations that aren't absolutely necessary at each step. You may have noticed the variable, `check_count`. If you are feeling unconvinced that the break and continue are not cutting down on the amount of times our code is executing, run the cell below and compare the `check_count`s, which increment after **each** check of a conditional statement.
+This way, we are optimizing our code by making sure that we eliminate performing any operations that aren't absolutely necessary at each step. You may have noticed the variable, `check_count`. If you are feeling unconvinced that the break and continue are not cutting down on the number of times our code is executing, run the cell below and compare the `check_count`s, which increment after **each** check of a conditional statement.
 
 
 ```python
@@ -307,9 +307,9 @@ print(check_count)
     before ['aNNE', 'JaNe', 'willIAM', 'WanDA', 'WeSt', 'HELEN', 'tHoMaS', 'HENrY', 'John', 'Marshall', 'May']
     after ['Anne', 'Jane', 'William', 'Wanda']
     8
-    
 
-See that?! We have cut down on the different checks we perform by half (50%)! And on top of that, to get the same result we have to have a **nested** if statement, which is, technically put, ***gross***. All joking aside, nested `if` statements should be avoided if they can be since they make our code less readable and therefore harder to maintain ontop of being half as efficient as our previous code.
+
+See that?! We have cut down on the different checks we perform by half (50%)! And on top of that, to get the same result we have to have a **nested** if statement, which is, technically put, ***gross***. All joking aside, nested `if` statements should be avoided if they can be since they make our code less readable and therefore harder to maintain on top of being half as efficient as our previous code.
 
 It's important to note that these excess checks could represent much more expensive operations in our code. So, it is important to try and use `break` and `continue` when it makes sense.
 
