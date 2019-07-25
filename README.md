@@ -76,7 +76,7 @@ However, we know that eventually that number will be less than 0 and the loop wi
 
 ## When To Use While Loops
 
-While loops are fairly straight forward. We use them in instances where we have a **condition** that serves as the point at which we want a process to stop. For example, if we think about our appetite, we should eat until we aren't hungry, right? Some days that might be two slices of pizza, some days that might be 5 slices of pizza (and that is assumed all pizza slices to be of equal size, which is a *generous* assumption).
+While loops are fairly straight forward. We use them in instances where we have a **condition** that serves as the point at which we want a process to stop. For example, if we think about our appetite, we should eat until we aren't hungry, right? Some days that might be two slices of pizza, some days that might be 5 slices of pizza (and that is assuming all pizza slices are of equal size, which is a *generous* assumption).
 
 ![liz_lemon_eating_pizza](images/liz_lemon_eating_pizza.gif)
 
@@ -188,7 +188,7 @@ for num in numbers:
 
 Okay, so, let's unpack what's happening here. 
 
-First, we have a for loop that is iterating over our list, `numbers`, which has 30 numbers in it. Then we see that we have an if statement that only executes it's code when our `new_list` has more than 4 numbers in it. Once this condition is met, we **break** out of our loop. We then have an `elif` statement that adds any even number to the `new_list`, and a final `elif` statement that tests to see if the number is odd, and if it is odd, then it **continue**s to the next element in our for loop's iteration process. 
+First, we have a for loop that is iterating over our list, `numbers`, which has 30 numbers in it. Then we see that we have an `if` statement that only executes it's code when our `new_list` has more than 4 numbers in it. Once this condition is met, we **break** out of our loop. We then have an `elif` statement that adds any even number to the `new_list`, and a final `elif` statement that tests to see if the number is odd, and if it is odd, then it **continue**s to the next element in our for loop's iteration process. 
 
 So, first let's dig into the `continue` statement. `continue` is telling our loop to **skip** any code that comes after it and go straight to the next element in our loop. So, if we are dealing with number `1` in our list of numbers, we will hit our `continue` statement and immediately go to the next element in our for loop (i.e. `2`). Any code that comes after the `continue` will **not** be executed, **but** our for loop does **not** end execution. This contrasts with the `break` statement. Our break statement is only executed when we have met our condition that the `new_list` has reached the number of elements we want it to have. Once the `break` statement is executed, it will end the execution of the for loop altogether. All code after the `break` statement will be ignored, similar to our `continue`, but there will be no next step to the iteration. It stops the loop and that's the end.
 
@@ -294,7 +294,7 @@ for name in names:
     formatted_name = ""
     if len(formatted_names) < 4:
         check_count += 1
-        if not name.startswith('w') or not name.startswith("W"):
+        if not (name.startswith('w') or name.startswith("W")):
             check_count += 1
             formatted_names.append(name.title())
             
@@ -305,14 +305,19 @@ print(check_count)
 ```
 
     before ['aNNE', 'JaNe', 'willIAM', 'WanDA', 'WeSt', 'HELEN', 'tHoMaS', 'HENrY', 'John', 'Marshall', 'May']
-    after ['Anne', 'Jane', 'William', 'Wanda']
-    8
+    after ['Anne', 'Jane', 'Helen', 'Thomas']
+    11
 
 
-See that?! We have cut down on the different checks we perform by half (50%)! And on top of that, to get the same result we have to have a **nested** if statement, which is, technically put, ***gross***. All joking aside, nested `if` statements should be avoided if they can be since they make our code less readable and therefore harder to maintain on top of being half as efficient as our previous code.
+See that?! We have cut down on the different checks we perform by more than half (50%)! And on top of that, to get the same result we have to have a **nested** if statement, which is, technically put, ***gross***. All joking aside, nested `if` statements should be avoided if they can be since they make our code less readable and therefore harder to maintain on top of being half as efficient as our previous code.
 
 It's important to note that these excess checks could represent much more expensive operations in our code. So, it is important to try and use `break` and `continue` when it makes sense.
 
 ## Summary
 
 Awesome! While loops are great, right? We can use them to perform operations based on the truthiness of a condition instead of needing to iterate over the elements in a collection. They provide a more dynamic way to perform operations, but we need to be careful when writing while loops because we need there to be a condition that ends the loop. Otherwise we will have an **infinite** loop which will give us and our computer a real headache. In this lesson, we also introduced some *control flow* statements, `break` and `continue`, which allow us to make our conditional statements and the rest of our code more efficient and more readable. We call these statements control flow statements because they allow us to *control* the *flow* of our code's execution. 
+
+
+```python
+
+```
