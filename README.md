@@ -38,17 +38,21 @@ Note the lack of a `list` or other collection, and that our second print stateme
 
 Also, notice that the structure of a while loop is such that it could execute for an *unknown* amount of times. For example, if we didn't know the stop_number because it changed from time to time, our while loop could execute more 100 times or 3. 
 
-For example, if we used a random number:
+For example, if we used a random number using the random library from numpy:
 
 
 ```python
-import random
-random_num = random.randint(1,20)
+import numpy as np
+random_num = np.random.randint(1,20)
 while random_num > 0:
     random_num -= 1
     print(random_num)
 ```
 
+    13
+    12
+    11
+    10
     9
     8
     7
@@ -307,8 +311,3 @@ It's important to note that these excess checks could represent much more expens
 ## Summary
 
 Awesome! While loops are great, right? We can use them to perform operations based on the truthiness of a condition instead of needing to iterate over the elements in a collection. They provide a more dynamic way to perform operations, but we need to be careful when writing while loops because we need there to be a condition that ends the loop. Otherwise we will have an **infinite** loop which will give us and our computer a real headache. In this lesson, we also introduced some *control flow* statements, `break` and `continue`, which allow us to make our conditional statements and the rest of our code more efficient and more readable. We call these statements control flow statements because they allow us to *control* the *flow* of our code's execution. 
-
-
-```python
-
-```
