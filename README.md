@@ -3,14 +3,14 @@
 
 ## Introduction
 
-Earlier in the course, we learned how to iterate over collections. But is there is a way to have a loop **without** a collection to iterate over? Well, another way to create a loop is with **while** loops. We can use a while loop to perform the same action over and over until a condition is no longer `True`. We don't even need an *iterable* or collection to iterate over. We can just define a condition and perform the given code block until the condition is no longer `True`. Pretty cool, right?   
+Earlier in the course, we learned how to iterate over collections. But is there a way to have a loop **without** a collection to iterate over? Well, another way to create a loop is with **while** loops. We can use a while loop to perform the same action over and over until a condition is no longer `True`. We don't even need an *iterable* or collection to iterate over. We can just define a condition and perform the given code block until the condition is no longer `True`. Pretty cool, right?   
 
 Or what if we would like to have a loop that stops at a certain point? Let's say we only want to collect half of the elements of a list, or stop a list once we find the first matching element? To perform operations like these we'll need `break` and `continue` statements. These statements **control the flow** of our loops and will help us make our loops even more effective.
 
 ## Objectives
 You will be able to:
-* Understand, explain and use `while` loops 
-* Use `break` and `continue` statements inside a loop
+- Understand, explain and use `while` loops 
+- Use `break` and `continue` statements inside a loop
 
 
 ## What is a `while` loop and how does it work?
@@ -66,7 +66,7 @@ while random_num > 0:
     0
 
 
-However, we know that eventually that number will be less than 0 and the loop will eventually stop. This is of critical importance. A while loop must always have a condition that will stop the loop, otherwise we will have an **infinite** loop. Infinite loops can crash your browser or program, if you don't have a way to end it, so, it is very important to make sure your loops have a fairly defined **end** case.
+However, we know that eventually that number will be less than 0 and the loop will eventually stop. This is of critical importance. A while loop must always have a condition that will stop the loop, otherwise we will have an **infinite** loop. Infinite loops can crash your browser or program if you don't have a way to end it. So, it is very important to make sure your loops have a fairly defined **end** case.
 
 *If you do ever accidentally create an infinite loop, don't worry. Your current Notebook might freeze, and then kill the page to stop the execution. You can then re-open the browser again normally.*
 
@@ -134,7 +134,7 @@ while hydration < 100 and water > 0:
 
 ## On To `break` And `continue` Statements
 
-In the case of `break` and `continue` statements, it is almost best to not overthink. `break` and `continue` essentially do what they sound like. They are used in tandem with conditional statements (`if`, `elif`) inside loops, and they *break* out of a loop if a condition is met or *continue* a loop if a different condition is met. Before we dive too deep into how these statements function, let's look at an example.
+In the case of `break` and `continue` statements, it is almost best to not overthink. `break` and `continue` essentially do what they sound like. They are used in tandem with conditional statements (`if`, `elif`), inside loops, and they *break* out of a loop if a condition is met or *continue* a loop if a different condition is met. Before we dive too deeply into how these statements function, let's look at an example.
 
 
 ```python
@@ -182,7 +182,7 @@ for num in numbers:
     We have enough even numbers in new_list (5). break will stop the for loop now
 
 
-Okay, so, let's unpack what's happening here. 
+So, let's unpack what's happening here. 
 
 First, we have a `for` loop that is iterating over our list, `numbers`, which has 30 numbers in it. Then we see that we have an `if` statement that only executes its code when our `new_list` has more than 4 numbers in it. Once this condition is met, we **break** out of our loop. We then have an `elif` statement that adds any even number to the `new_list`, and a final `elif` statement that tests to see if the number is odd, and if it is odd, then it **continue**s to the next element in our for loop's iteration process. 
 
