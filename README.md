@@ -9,8 +9,9 @@ Or what if we would like to have a loop that stops at a certain point? Let's say
 
 ## Objectives
 You will be able to:
-- Understand, explain and use `while` loops 
-- Use `break` and `continue` statements inside a loop
+
+* Use a `while` loop
+* Use `break` and `continue` to add control flow to a `while` loop
 
 
 ## What is a `while` loop and how does it work?
