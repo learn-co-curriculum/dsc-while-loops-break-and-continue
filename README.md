@@ -51,11 +51,6 @@ while random_num > 0:
     print(random_num)
 ```
 
-    13
-    12
-    11
-    10
-    9
     8
     7
     6
@@ -88,7 +83,7 @@ while hydration < 100 and water > 0:
     water -= .1
     print('ah, that was refreshing')
     hydration += 10
-    print("hydration is now at", hydration, "%\n")
+    print('hydration is now at', hydration, '%\n')
 ```
 
     ----[sips water]-----
@@ -143,15 +138,15 @@ numbers = list(range(0, 30))
 new_list = []
 for num in numbers:
     if len(new_list) > 4:
-        print(f"We have enough even numbers in new_list ({len(new_list)}). break will stop the for loop now")
+        print(f'We have enough even numbers in new_list ({len(new_list)}). break will stop the for loop now')
         break
     elif num % 2 == 0:
         new_list.append(num)
     elif num % 2 != 0:
         continue
-        print("i never get executed")
-    print(num, "is even.")
-    print("this does not print for odd numbers\nbecause the continue statement skips\nthe code that follows in the for loop\nand goes straight back to the next element in the for loop")
+        print('i never get executed')
+    print(num, 'is even.')
+    print('this does not print for odd numbers\nbecause the continue statement skips\nthe code that follows in the for loop\nand goes straight back to the next element in the for loop')
     
 ```
 
@@ -254,12 +249,12 @@ Let's say you have a collection of elements and that you want to filter out cert
 
 
 ```python
-names = ["aNNE", "JaNe", "willIAM", "WanDA", "WeSt", "HELEN", "tHoMaS", "HENrY", "John", "Marshall", "May"]
+names = ['aNNE', 'JaNe', 'willIAM', 'WanDA', 'WeSt', 'HELEN', 'tHoMaS', 'HENrY', 'John', 'Marshall', 'May']
 formatted_names = []
 check_count = 0
 
 for name in names:
-    if name.startswith('w') or name.startswith("W"):
+    if name.startswith('w') or name.startswith('W'):
         check_count += 1
         continue
     elif len(formatted_names) >= 4:
@@ -268,8 +263,8 @@ for name in names:
     else:
         formatted_names.append(name.title())
 
-print("before", names)
-print("after", formatted_names)
+print('before', names)
+print('after', formatted_names)
 print(check_count)
 ```
 
@@ -283,21 +278,20 @@ This way, we are optimizing our code by making sure that we eliminate performing
 
 
 ```python
-names = ["aNNE", "JaNe", "willIAM", "WanDA", "WeSt", "HELEN", "tHoMaS", "HENrY", "John", "Marshall", "May"]
+names = ['aNNE', 'JaNe', 'willIAM', 'WanDA', 'WeSt', 'HELEN', 'tHoMaS', 'HENrY', 'John', 'Marshall', 'May']
 formatted_names = []
 check_count = 0
 
 for name in names:
-    formatted_name = ""
     if len(formatted_names) < 4:
         check_count += 1
-        if not (name.startswith('w') or name.startswith("W")):
+        if not (name.startswith('w') or name.startswith('W')):
             check_count += 1
             formatted_names.append(name.title())
             
 
-print("before", names)
-print("after", formatted_names)        
+print('before', names)
+print('after', formatted_names)        
 print(check_count)
 ```
 
