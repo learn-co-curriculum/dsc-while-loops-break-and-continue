@@ -1,4 +1,3 @@
-
 # While Loops, Break and Continue
 
 ## Introduction
@@ -70,7 +69,7 @@ However, we know that eventually that number will be less than 0 and the loop wi
 
 While loops are fairly straight forward. We use them in instances where we have a **condition** that serves as the point at which we want a process to stop. For example, if we think about our appetite, we should eat until we aren't hungry, right? Some days that might be two slices of pizza, some days that might be 5 slices of pizza (and that is assuming all pizza slices are of equal size, which is a *generous* assumption).
 
-![liz_lemon_eating_pizza](images/liz_lemon_eating_pizza.gif)
+![liz_lemon_eating_pizza](https://curriculum-content.s3.amazonaws.com/data-science/images/liz_lemon_eating_pizza.gif)
 
 In keeping with our food theme, let's see how we can make sure we're drinking enough water during the day using a while loop:
 
